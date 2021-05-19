@@ -41,11 +41,12 @@ def weather_fetch(city_name):
 
 
 
-# ===============================================================================================
-# ------------------------------------ FLASK APP -------------------------------------------------
-
-
 app = Flask(__name__)
+
+
+@app.route('/')
+def crop_recommend():
+    return render_template('mainpage.html')
 
 
 
@@ -54,7 +55,7 @@ def crop_recommend():
     title = 'Harvestify - Crop Recommendation'
     return render_template('crop.html', title=title)
 
-# render fertilizer recommendation form page
+
 
 
 @app.route('/fertilizer')
@@ -63,18 +64,14 @@ def fertilizer_recommendation():
 
     return render_template('fertilizer.html', title=title)
 
-# render disease prediction input page
+
 
 
 crop_recommendation_model_path = 'RandomForest.pkl'
 crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
 
-# ===============================================================================================
 
-# RENDER PREDICTION PAGES
-
-# render crop recommendation result page
 
 
 @app.route('/crop-predict', methods=['POST'])
@@ -102,8 +99,6 @@ def crop_prediction():
         else:
 
             return render_template('try_again.html', title=title)
-
-# render fertilizer recommendation result page
 
 
 @app.route('/fertilizer-predict', methods=['POST'])
