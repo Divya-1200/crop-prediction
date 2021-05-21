@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <p>hi</p>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+    body {margin:25px;}
+    
+    div.polaroid {
+      width: 300px;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 25px;
+    }
+    
+    div.container {
+      text-align: center;
+      padding: 10px 20px;
+    }
+    .box{
+        padding-left: 375px !important;
+
+    }
+    </style>
+    </head>
+    <body>
+    <center>
+        <h2>Crop and fertilizer prediction</h2>
+    </center>
+    
+    <div class="container box pt-5">
+        
+        <div class="polaroid">
+            <a href="/crop-recommend">
+                <img src="static/images/crop.jpg" alt="crop" style="width:300px">
+            </a>
+            
+            <div class="container">
+            <p>Predict crop</p>
+            </div>
+          </div>
+          
+          <div class="polaroid">
+            <a href="/fertilizer">
+                <img src="static/images/fertilizer.jpg" alt="fertiliser" style="width:300px">
+            </a>
+            
+            <div class="container">
+            <p>Predict fertilizer</p>
+            </div>
+          </div>
+
+    </div>
+    
+
 </body>
 </html>

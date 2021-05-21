@@ -45,7 +45,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def crop_recommend():
+def main_page():
     return render_template('mainpage.html')
 
 
